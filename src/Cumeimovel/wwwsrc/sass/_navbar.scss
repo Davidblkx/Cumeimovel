@@ -19,8 +19,9 @@
 
     .navbar-brand{
         h1{
+            font-family: 'Baloo Chettan', sans-serif;
             margin: 0;
-            font-weight: 800;
+            //font-weight: 800;
             color: $red;
         }
     }
@@ -30,12 +31,13 @@
         li{
             a{
                 color: $black;
-                font-weight: 500;
+                font-weight: 400;
             }
         }
 
         li.active{
             a{
+                font-weight: 500;
                 border-bottom: 1px solid $red;
             }
         }

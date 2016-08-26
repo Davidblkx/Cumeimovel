@@ -23,7 +23,8 @@
     "Microsoft.AspNetCore.Authorization": "1.0.0",
     "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0",
     "Microsoft.AspNetCore.Authentication": "1.0.0",
-    "BundlerMinifier.Core": "2.2.281"
+    "BundlerMinifier.Core": "2.2.281",
+    "Newtonsoft.Json": "9.0.1"
   },
 
   "tools": {

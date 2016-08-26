@@ -11,14 +11,13 @@ namespace Cumeimovel
     {
         public static void Main(string[] args)
         {
-            int port = 5000;
 
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:" + port)
+                .UseUrls("http://localhost:" + AppSettings.Local.Port)
                 .Build();
 
             host.Run();

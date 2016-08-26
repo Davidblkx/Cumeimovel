@@ -51,6 +51,7 @@ gulp.task('copy:lib', function () {
         , b + 'flexslider/**/*.woff'
         , b + 'animate.css/*.min.css'
         , b + 'angular-strap/dist/**/*.*.js'
+        , b + 'scrollreveal/dist/**/*.min.js'
         , b + 'angular-motion/dist/**/*.min.css'])
         .pipe(gulp.dest('wwwroot/lib/'));
 });

@@ -8,7 +8,7 @@ namespace main {
             animation: 'slide'
         });
 
-        var maxHeight = jQuery(document).innerHeight() * 0.4;
+        var maxHeight = jQuery(document).height() * 0.3;
         jQuery('#collection img').css('max-height', maxHeight);
         jQuery('#collection img').css('width', 'auto');
 
@@ -19,5 +19,14 @@ namespace main {
 
         jQuery('.flex-caption').css('max-width', tools.GetScreenWidth());
 
+        jQuery('.divide-80').on('scrollSpy:enter', function (obj) {
+            console.log('enter');
+        });
+
     });
+}
+
+namespace anim {
+    var sr = ScrollReveal({ reset: true });
+    sr.reveal('.revealing', { duration: 2000 }, 50);
 }

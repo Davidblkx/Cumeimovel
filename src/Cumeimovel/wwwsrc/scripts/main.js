@@ -5,7 +5,7 @@ var main;
         jQuery('#home .flexslider').flexslider({
             animation: 'slide'
         });
-        var maxHeight = jQuery(document).innerHeight() * 0.4;
+        var maxHeight = jQuery(document).height() * 0.3;
         jQuery('#collection img').css('max-height', maxHeight);
         jQuery('#collection img').css('width', 'auto');
         jQuery('#collection .flexslider').flexslider({
@@ -13,5 +13,13 @@ var main;
             smoothHeight: true
         });
         jQuery('.flex-caption').css('max-width', tools.GetScreenWidth());
+        jQuery('.divide-80').on('scrollSpy:enter', function (obj) {
+            console.log('enter');
+        });
     });
 })(main || (main = {}));
+var anim;
+(function (anim) {
+    var sr = ScrollReveal({ reset: true });
+    sr.reveal('.revealing', { duration: 2000 }, 50);
+})(anim || (anim = {}));
