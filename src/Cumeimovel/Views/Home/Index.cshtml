@@ -1,8 +1,186 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Cumeimovel";
 }
-
-<div ng-controller="TestController">
-    <h1>Welcome @User.Identity.Name</h1>
-    <h2>{{message}}</h2>
+<div id="home" class="home-page">
+    <div class="slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="~/img/banner-1.jpg" />
+                    <div class="flex-caption">
+                        <div class="caption-content">
+                            <h1>Cozinhas e carpintaria por</h1>
+                            <h1><span class="show">medida</span></h1>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="~/img/banner-2.jpg" />
+                    <div class="flex-caption">
+                        <div class="caption-content">
+                            <h1>Design</h1>
+                            <h1><span class="show">elegante</span></h1>
+                            <h1>e</h1>
+                            <h1><span class="show">flexível</span></h1>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="~/img/banner-3.jpg" />
+                    <div class="flex-caption">
+                        <div class="caption-content">
+                            <h1>À medida da sua </h1>
+                            <h1><span class="show">carteira</span></h1>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
+
+<div id="principios" class="divide-80"></div>
+
+<div id="target">
+    <div class="container">
+        <h1 class="section-title">Princípios</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="info-box animated fadeInLeft">
+                    <h3>
+                        <i class="fa fa-arrows-v"></i>
+                        Por medida
+                    </h3>
+                    <p>
+                        Tudo é feito de raiz e à medida do seu espaço
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box animated fadeInLeft">
+                    <h3>
+                        <i class="fa fa-euro"></i>
+                        Preços competitivos
+                    </h3>
+                    <p>
+                        A melhor relação preço/qualidade do mercado e ajustável à sua carteira
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box animated fadeInLeft">
+                    <h3>
+                        <i class="fa fa-thumbs-o-up"></i>
+                        Experiência
+                    </h3>
+                    <p>
+                        Experiência superior a 30 anos, refletida em acabamentos de luxo
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="info-box animated fadeInLeft">
+                    <h3>
+                        <i class="fa fa-ambulance"></i>
+                        Assistência
+                    </h3>
+                    <p>
+                        Graças à qualidade de produção podemos garantir assistência a qualquer um dos nossos produtos
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box animated fadeInLeft">
+                    <h3>
+                        <i class="fa fa-calendar"></i>
+                        Pontualidade
+                    </h3>
+                    <p>
+                        Fazemos questão de cumprir os prazos acordados, garantindo que
+                        o seu projeto evolui ao ritmo pretendido
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box animated fadeInLeft">
+                    <h3>
+                        <i class="fa fa-home"></i>
+                        Instalações
+                    </h3>
+                    <p>
+                        Temos à nossa disposição instalações modernas que nos permitem dar resposta
+                        a pedidos de qualquer dimensão a um tempo record
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="info-box animated fadeInLeft animated">
+                    <h3>
+                        <i class="fa fa-file-o"></i>
+                        Orçamento gratuito
+                    </h3>
+                    <p>
+                        Agende já um contacto ou venha-nos visitar junto das nossas instalações
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="portefolio" class="divide-80"></div>
+
+<div id="collection">
+    <div class="container">
+        <h1 class="section-title">Portefólio</h1>
+        <div class="slider">
+            <div class="flexslider">
+                <ul class="slides">
+                    @for (var i = 1; i <= System.IO.Directory.EnumerateFiles("wwwroot/img", "img*.jpg").Count(); i++)
+                    {
+                        var s = $"/img/img{i}.jpg";
+                        <li>
+                            <img src=@s />
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contactos" class="divide-80"></div>
+
+<div id="contacts">
+    <div class="container">
+        <h1 class="section-title">Contactos</h1>
+        <div class="row">
+            <div class="col-md-6 info-left">
+                <p><b>Telefone: </b> (+351) 244 401 300</p>
+                <p><b>Telemóvel: </b> (+351) 914 451 722</p>
+                <p><b>Email: </b> cumeimovel@gmail.com</p>
+            </div>
+            <div class="col-md-6 info-right">
+                <p>Zona Industrial do Juncal</p>
+                <p>2480-350 Leiria</p>
+                <p>Seg-Sexta 09:00-18:00</p>
+            </div>
+        </div>
+    </div>
+
+
+    <iframe height="450" frameborder="0" style="border:0;width:100%" src="https://www.google.com/maps/embed/v1/search?q=39.591964%2C%20-8.900267&key=AIzaSyC99mASBLB54v-irRTiwLptMqSy9q_aA3k" allowfullscreen></iframe>
+
+
+</div>
+
+<div class="divide-80"></div>
+@section Scripts{
+    <script src="~/js/main.min.js"></script>
+}

@@ -1,0 +1,106 @@
+﻿@import '_imports.scss';
+
+.home-page{
+
+    .flexslider{
+        border: 0;
+    }
+
+    .flex-direction-nav{
+        display: none;
+    }
+
+    .flex-control-nav li a{
+        background-color: $white;
+    }
+
+    .flex-control-nav li a.flex-active{
+        background-color: $red;
+    }
+
+    .flex-caption{
+        font-weight: 800;
+        position: absolute;
+        bottom: 1em;
+        width: 100%;
+        text-align: center;
+
+        .caption-content{
+            width: 60%;
+            padding: 1em 5em;
+            margin-top: 3em;
+            background-color: fade-out($red, 0.6);
+            color: $white;
+
+            h1{
+                display: inline-flex;
+                color: white;
+                font-size: 3em;
+                margin: 0;
+
+                .show{
+                    font-weight: 800;
+                    padding: 0 0.2em;
+                }
+            }
+            h2{
+                font-size: 1.8em;
+            }
+        }
+    }
+
+}
+
+#target{
+    color: $white;
+
+    .info-box{
+        h3{
+            i{
+                color: fade-out($red, 0.35);
+            }
+        }
+    }
+}
+
+#collection{
+    .flex-control-nav li a{
+        background-color: $white;
+    }
+
+    .flex-control-nav li a.flex-active{
+        background-color: $red;
+    }
+
+    li{
+        text-align: center;
+
+        img{
+            display: inline-block;
+        }
+    }
+
+    .flexslider{
+        background-color: transparent;
+        border: 0;
+    }
+
+    overflow-x: hidden;
+}
+
+#contacts{
+    color: $white;
+
+    .info-left{
+        text-align: right;
+        border-right: 1px solid $red;
+    }
+}
+
+.section-title{
+    width:100%;
+    text-align: center;
+    border-bottom: 1px solid $red;
+    padding-bottom: 0.3em;
+    color: $white;
+}

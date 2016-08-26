@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Cumeimovel.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         public IActionResult Index()

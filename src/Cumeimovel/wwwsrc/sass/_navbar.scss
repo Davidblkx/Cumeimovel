@@ -1,0 +1,48 @@
+﻿@import '_imports.scss';
+
+.hidden-navbar{
+    background-color: $black;
+    color: $white;
+    padding: 0.1em 0;
+    font-size: 1.1em;
+
+    .info-facebook{
+        a{
+            color: $white;
+        }
+    }
+}
+
+.main-navbar{
+    z-index: 1000;
+    background-color: white;
+
+    .navbar-brand{
+        h1{
+            margin: 0;
+            font-weight: 800;
+            color: $red;
+        }
+    }
+
+    .nav{
+
+        li{
+            a{
+                color: $black;
+                font-weight: 500;
+            }
+        }
+
+        li.active{
+            a{
+                border-bottom: 1px solid $red;
+            }
+        }
+    }
+}
+
+.main-navbar.affix{
+    width: 100%;
+    top: 0;
+}

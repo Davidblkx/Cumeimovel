@@ -19,6 +19,13 @@ gulp.task('copy:sass', function () {
         .pipe(livereload());
 });
 
+//*************** IMAGES ****************
+gulp.task('copy:img', function () {
+    return gulp.src("wwwsrc/images/**/*")
+        .pipe(gulp.dest("wwwroot/img/"))
+        .pipe(livereload());
+});
+
 
 //************** SCRIPTS ********************
 gulp.task('copy:scripts', function () {
@@ -30,8 +37,27 @@ gulp.task('copy:scripts', function () {
 
 //************** LIBRARYS ********************
 gulp.task('copy:lib', function () {
-    return gulp.src([b + 'angular/angular.min.js'])
+    return gulp.src([b + 'angular/angular.min.js'
+        , b + 'angular-animate/*.min.js'
+        , b + 'bootstrap/dist/css/*.min.css'
+        , b + 'bootstrap/dist/js/*.min.js'
+        , b + 'jquery/dist/*.min.js'
+        , b + 'font-awesome/css/*.min.css'
+        , b + 'flexslider/flexslider.css'
+        , b + 'flexslider/jquery.flexslider*.js'
+        , b + 'flexslider/**/*.eot'
+        , b + 'flexslider/**/*.svg'
+        , b + 'flexslider/**/*.ttf'
+        , b + 'flexslider/**/*.woff'
+        , b + 'animate.css/*.min.css'
+        , b + 'angular-strap/dist/**/*.*.js'
+        , b + 'angular-motion/dist/**/*.min.css'])
         .pipe(gulp.dest('wwwroot/lib/'));
+});
+gulp.task('copy:fonts', function () {
+    return gulp.src([b + 'bootstrap/dist/fonts/**/*'
+        , b + 'font-awesome/fonts/**/*'])
+        .pipe(gulp.dest('wwwroot/fonts/'));
 });
 
 //************** AngularApp ******************
@@ -56,11 +82,10 @@ gulp.task('watch', function () {
     gulp.watch(['wwwroot/**/*', 'Views/**/*']).on('change', livereload.changed);
 });
 
-
-gulp.task('default', ['clean'], function () {
-    gulp.start('copy:sass', 'copy:scripts', 'copy:lib', 'copy:app', 'watch');
+gulp.task('deploy', ['clean'], function () {
+    gulp.start('copy:sass', 'copy:scripts', 'copy:lib', 'copy:app', 'copy:fonts', 'copy:img');
 });
 
-gulp.task('deploy', ['clean'], function () {
-    gulp.start('copy:sass', 'copy:scripts', 'copy:lib', 'copy:app');
+gulp.task('default', ['clean'], function () {
+    gulp.start('deploy', 'watch');
 });

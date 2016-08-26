@@ -1,2 +1,16 @@
-﻿body {
+﻿@import '_imports.scss', '_navbar.scss', '_home.scss';
+
+html, body{
+    color: $black;
+    overflow-x: hidden;
+    background-color: $black;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.divide-80{
+    width: 100%;
+    height: 80px;
 }

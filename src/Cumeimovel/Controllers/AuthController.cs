@@ -41,15 +41,15 @@ namespace Cumeimovel.Controllers
                 ModelState.AddModelError("Pass", "Password não é valida");
             }
 
+            ModelState.AddModelError("Auth", "Auth not implemented");
+            // ***********************************************
+            //[Database logic and password verification HERE ]
+            // ***********************************************
+
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
-
-
-            // ***********************************************
-            //[Database logic and password verification HERE ]
-            // ***********************************************
 
             const string issuer = "http://mysite.domain";
             List<Claim> claims = new List<Claim>();
