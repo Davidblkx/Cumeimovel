@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <environment names="Development">
+        <link href="~/css/site.min.css" rel="stylesheet" />
+    </environment>
+    <environment names="Staging,Production">
+        <link href="~/css/site.min.css" rel="stylesheet" />
+    </environment>
+</head>
+<body>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <environment names="Development">
+        <script src="~/lib/angular.min.js"></script>
+        <script src="~/js/app.min.js"></script>
+        <script src="~/js/site.min.js"></script>
+        <script src="~/js/livereload.min.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/lib/angular.min.js"></script>
+        <script src="~/js/app.min.js"></script>
+        <script src="~/js/site.min.js"></script>
+    </environment>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

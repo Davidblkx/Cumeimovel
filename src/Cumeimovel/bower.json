@@ -1,0 +1,25 @@
+{
+  "name": "asp.net-core",
+  "description": "template for asp.net core app using angularjs and typescript",
+  "main": "index.js",
+  "authors": [
+    "David Pires"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "template",
+    "netcore"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.5"
+  }
+}
